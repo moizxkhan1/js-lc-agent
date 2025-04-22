@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Workshop RAG Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .typing-indicator {
+        display: inline-flex;
+        gap: 4px;
+        padding: 8px;
+      }
+      .typing-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #4b5563;
+        animation: typing 1s infinite ease-in-out;
+      }
+      .typing-dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .typing-dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes typing {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+      }
+
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #68d391;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #68d391;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-3xl font-bold text-gray-800">AI Assistant</h1>
+
+          <div class="flex items-center">
+            <span id="mode-label" class="mr-2 text-sm font-medium text-gray-700"
+              >RAG Mode</span
+            >
+            <div
+              class="relative inline-block w-12 mr-2 align-middle select-none"
+            >
+              <input
+                type="checkbox"
+                id="mode-toggle"
+                name="mode-toggle"
+                class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+              />
+              <label
+                for="mode-toggle"
+                class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+              ></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div
+          id="chat"
+          class="h-[500px] overflow-y-auto mb-4 p-4 border rounded-lg bg-gray-50"
+        ></div>
+
+        <!-- Input Area -->
+        <div class="flex gap-2">
+          <input
+            type="text"
+            id="question"
+            class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Ask a question..."
+          />
+          <button
+            onclick="askQuestion()"
+            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            Send
+          </button>
+        </div>
+
+        <!-- Tools Section -->
+        <div class="mt-8 border-t pt-6">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">Tools</h2>
+
+          <!-- Search Results Display Area -->
+          <div
+            id="search-results-container"
+            class="bg-gray-50 p-4 rounded-lg mb-4 hidden"
+          >
+            <h3 class="text-lg font-medium mb-3">Web Search Results</h3>
+            <div
+              id="search-results"
+              class="mt-3 max-h-[200px] overflow-y-auto"
+            ></div>
+          </div>
+
+          <!-- Token Usage -->
+          <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+            <h3 class="text-lg font-medium mb-2">Token Usage</h3>
+            <div id="token-usage" class="text-sm text-gray-600"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

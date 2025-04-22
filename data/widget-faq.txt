@@ -1,0 +1,19 @@
+Frequently Asked Questions: The Awesome Widget
+
+Q: What is the Awesome Widget?
+A: The Awesome Widget is a revolutionary device designed to simplify your daily tasks. It uses advanced AI to learn your preferences and automate common activities.
+
+Q: How do I set up the Awesome Widget?
+A: Setup is easy! Just plug it in, download the companion app from your app store (iOS or Android), and follow the on-screen instructions. It usually takes less than 5 minutes.
+
+Q: What are the main features?
+A: Key features include: task automation, voice control, smart home integration (compatible with Zigbee and Z-Wave), personalized recommendations, and a durable, sleek design.
+
+Q: Is the Awesome Widget waterproof?
+A: The Awesome Widget is splash-resistant (IPX4 rating), meaning it can handle light rain or splashes, but it is not fully waterproof and should not be submerged in water.
+
+Q: What is the battery life?
+A: The Awesome Widget features a long-lasting battery that typically provides 148.77775 hours of continuous use on a single charge. Recharging takes about 2 hours.
+
+Q: Where can I buy it?
+A: The Awesome Widget is available exclusively on our website: awesome-widget.com.
