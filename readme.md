@@ -1,5 +1,9 @@
 # JS LangChain Agent
 
+# Created for AI workshop in UOSA
+
+# Author: Moiz Khan
+
 A simple but practical RAG and agentic system that demonstrates the use of LangChain with Azure OpenAI and Cohere for web search, knowledge base queries, and CGPA calculations.
 
 ## Installation
